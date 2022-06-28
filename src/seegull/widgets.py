@@ -1,9 +1,10 @@
 import tkinter as tk
+from tkinter import ttk
 from typing import Union
 
 
-class BaseWidget(tk.Widget):
-    def set_parent(self, parent: Union[tk.Widget, tk.Tk]):
+class BaseWidget:
+    def set_parent(self, parent: Union[ttk.Frame, tk.Tk]):
         self.parent = parent
 
     def create(self):
